@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PROJDIR=$(realpath $(dirname $0)/..)
+IN=${PROJDIR}/../in/
+KOREOGRAFEYE=/Users/hochsten/github.com/eyereasoner/Koreografeye
+
+${KOREOGRAFEYE}/bin/orch \
+    --keep  \
+    --config ${PROJDIR}/config.jsonld \
+    --in ${PROJDIR}/in \
+    --out ${PROJDIR}/out \
+    --err ${PROJDIR}/err \
+    ${PROJDIR}/rules/*.n3

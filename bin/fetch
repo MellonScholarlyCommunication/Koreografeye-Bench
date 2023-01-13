@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PROJDIR=$(realpath $(dirname $0))
+IN=${PROJDIR}/../in/
+RESOURCE=https://bellow2.ugent.be/test/scholix/biblio/biblio.ugent.be/inbox/
+KOREOGRAFEYE=/Users/hochsten/github.com/eyereasoner/Koreografeye
+BASHLIB_EXEC="node /Users/hochsten/github.com/SolidLabResearch/Bashlib/bin/solid.js"
+
+BASHLIB_BIN="${BASHLIB_EXEC}" ${KOREOGRAFEYE}/bin/watch --in ${IN} ${RESOURCE}
